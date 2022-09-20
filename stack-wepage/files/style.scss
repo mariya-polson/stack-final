@@ -1,0 +1,688 @@
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400;500&family=Poppins:wght@400;500;600;700;900&display=swap");
+@import "utils";
+@import "variables";
+
+body {
+  font-family: $font-family-1;
+  overflow-x: hidden;
+}
+.navbar-light .navbar-toggler {
+  border-color: $color-7;
+}
+.navbar {
+  background-color: #6a2b2b;
+  // background-color: #ffffff;
+  padding: 2rem 0;
+  .container {
+    background-color: azure;
+  }
+  .nav-part-1 {
+    margin: 0 0 0 6rem;
+    a.nav-link {
+      @include text-property($font-16, $font-500, $color-4);
+      margin: 0 1rem 0 0rem;
+      &:hover {
+        color: $color-7;
+        &::after {
+          content: "";
+          display: block;
+          width: 40%;
+          border-bottom: 2px solid $color-7;
+          margin: 2px;
+          transition: all 0.3s linear 0s;
+        }
+      }
+    }
+  }
+  .nav-part-2 {
+    margin: 0 1rem 0 2rem;
+    .notification-badge-1 {
+      position: absolute;
+      display: flex;
+      background: $color-10;
+      height: 7px;
+      top: 2.8rem;
+      right: 19.2rem;
+      width: 7px;
+      border-radius: 50%;
+    }
+    .notification-badge-2 {
+      position: absolute;
+      display: flex;
+      background: $color-10;
+      height: 7px;
+      top: 2.8rem;
+      right: 14.7rem;
+      width: 7px;
+      border-radius: 50%;
+    }
+  }
+}
+.popular-row {
+  background-color: burlywood;
+  padding: 23rem 0 0 0;
+  //   background-color: $color-11;
+  .popular-left {
+    width: 296px;
+    height: 415px;
+    margin: 0 0rem 0 -6.25rem;
+  }
+  .popular-right {
+    width: 335px;
+    height: 398px;
+    margin: 0 0rem 0 4.25rem;
+  }
+  .popular-box {
+    h1 {
+      margin: 0 25rem 0 0rem;
+      @include text-property($font-65, $font-400, $color-4);
+      font-family: $font-family-2;
+    }
+    h4 {
+      @include text-property($font-20, $font-400, $color-6);
+      margin: 0.875rem 0 0 0rem;
+    }
+    .slider {
+      @include text-property($font-14, $font-400, $color-6);
+      padding: 0px 0px 0 25rem;
+      img {
+        width: 28px;
+        height: 16px;
+      }
+    }
+    .resources-row {
+      padding: 4.19rem 0 10rem 0;
+      // margin: 0 0rem 0 0rem;
+      .resource-column-1,
+      .resource-column-2,
+      .resource-column-3 {
+        // padding: 1rem;
+        margin: 0 0.75rem 0 0;
+        width: 122px;
+        height: 170px;
+        border-radius: 10px;
+        display: flex;
+        box-shadow: 0px 10px 70px $color-9;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h6 {
+          @include text-property($font-18, $font-500, $color-4);
+          text-align: center;
+        }
+        img {
+          padding: 20px 0 0 0;
+        }
+      }
+      .resource-column-3 {
+        margin: 0 -2.5rem 0 0;
+      }
+      .resource-column-1 {
+        background: $color-8 0% 0% no-repeat padding-box;
+      }
+      .resource-column-2,
+      .resource-column-3 {
+        background: $color-1 0% 0% no-repeat padding-box;
+      }
+    }
+  }
+}
+
+// -------------------------------------------------------------------
+
+.carousel-indicators li {
+  width: 16px;
+  height: 16px;
+  margin-top: -19rem;
+  border-radius: 50%;
+  border: 1px solid $color-12;
+  border-top: 0;
+  border-bottom: 0;
+  opacity: 1;
+  &.active {
+    opacity: 1;
+    background-color: $color-7;
+    border: none;
+  }
+}
+
+.banner-image {
+  background: url(../images/banner.png) no-repeat;
+  background-size: cover;
+  // background-position: center;
+  .row.image-row1 {
+    justify-content: space-between;
+    img.coriander {
+      @include image-property(327px, 382px);
+      margin: -60px 0 0 -108px;
+
+      /* transform: matrix(0.87, 0.5, -0.5, 0.87, 0, 0); */
+    }
+    img.mint {
+      @include image-property(266px, 278px);
+    }
+  }
+  .row.image-row2 {
+    justify-content: space-between;
+    img.tomato {
+      @include image-property(158px, 212px);
+      margin: 1px 0 0 -44px;
+    }
+    img.meal-bowl {
+      @include image-property(420px, 300px);
+      margin: -158px 0 0 99px;
+    }
+    img.salad-bowl {
+      @include image-property(200px, 200px);
+    }
+    .col-md-4.headings-col {
+      margin: -119px 0 0 -62px;
+
+      span {
+        &.new {
+          @include text-property($font-20, $font-400, $color-2);
+          display: flex;
+          width: 83px;
+          height: 35px;
+          border: 1px solid $color-2;
+          border-radius: 18px;
+          justify-content: center;
+        }
+      }
+      p {
+        &.ultimate {
+          @include text-property($font-100, $font-400, $color-4);
+
+          font-family: $font-family-2;
+          line-height: 1;
+        }
+        sup {
+          @include text-property($font-24, $font-500, $color-5);
+          top: -138px;
+          left: 554px;
+        }
+      }
+      p {
+        &.available {
+          @include text-property($font-22, $font-400, $color-6);
+          margin-bottom: 0;
+          line-height: -33;
+          margin: -103px 0 0 0;
+          span {
+            @include text-property($font-22, $font-500, $color-3);
+          }
+        }
+      }
+    }
+  }
+  .row.image-row3 {
+    align-items: flex-start;
+    .fork-col {
+      img.spoon-fork {
+        @include image-property(440px, 468px);
+        margin: -46px 46px 0 30px;
+      }
+    }
+    .plate-col {
+      img.plate-meal {
+        @include image-property(514px, 518px);
+        margin: -45px 0 0 49px;
+      }
+    }
+    .input-col {
+      input[type="text"] {
+        background: url(../images/location.png) no-repeat;
+        background-position: 12px;
+        padding-left: 41px;
+        width: 683px;
+        height: 70px;
+        border-radius: 50px;
+        background-color: $color-1;
+        border: 1px solid $color-7;
+        opacity: 1;
+        font-size: $font-16;
+      }
+      .find {
+        @include text-property($font-20, $font-400, $color-1);
+        @include btn-property(
+          252px,
+          70px,
+          none,
+          $color-7 0% 0% no-repeat padding-box
+        );
+        float: right;
+        margin: -70px -24px 0 12px;
+        position: relative;
+      }
+    }
+  }
+  .row.justify-content-center.overlap-banner-row {
+    margin: -395px 0 0 0;
+    position: relative;
+    top: 162px;
+
+    .overlap-bannerimage {
+      background: url(../images/waves_1.png) no-repeat,
+        url(../images/overlap-banner.png) no-repeat;
+      background-size: cover;
+      width: 1367px;
+      height: 374px;
+      border-radius: 190px;
+      // opacity: 0.2;
+      .down-arrow {
+        @include btn-property(67px, 96px, none, $color-1);
+        border-radius: 34px;
+        margin-top: -145px;
+      }
+      h4 {
+        &.overlap-heading {
+          @include text-property($font-50, $font-500, $color-1);
+          padding: 0 7rem;
+          font-family: $font-family-2;
+          text-align: center;
+        }
+      }
+      .learn {
+        @include btn-property(252px, 70px, 2px solid $color-1, transparent);
+        @include text-property($font-20, $font-500, $color-1);
+        border-radius: 35px;
+      }
+    }
+  }
+}
+
+// ------------------------------------------
+.upcoming-row {
+  background-color: $color-11;
+  padding: 12rem 0 0 0;
+  .waves-2 {
+    width: 301px;
+    height: 372px;
+    margin: 13rem 0 0 0;
+  }
+  .waves-3 {
+    width: 317px;
+    height: 373px;
+    margin: 20.25rem 0px 0 -6rem;
+  }
+  .upcoming-box {
+    h1 {
+      margin: 0 25rem 0 0rem;
+      @include text-property($font-65, $font-400, $color-4);
+      font-family: $font-family-2;
+    }
+    h4 {
+      @include text-property($font-20, $font-400, $color-6);
+      margin: 0.875rem 0 0 0rem;
+    }
+    .slider {
+      @include text-property($font-14, $font-400, $color-6);
+      padding: 0px 0px 0 16rem;
+      img {
+        width: 28px;
+        height: 16px;
+      }
+    }
+    .card-deck {
+      padding: 4.7rem 0 0;
+      .card-body {
+        padding: 0.75rem;
+      }
+      .card {
+        background: $color-1 0% 0% no-repeat padding-box;
+        box-shadow: 0px 10px 70px $color-9;
+        border-radius: 30px;
+        height: 271px;
+        .text-block-1,
+        .text-block-2,
+        .text-block-3,
+        .text-block-4 {
+          background-color: $color-7;
+          @include text-block-property;
+          h4 {
+            @include text-property($font-22, $font-500, $color-1);
+            margin: 0;
+            sup {
+              @include text-property($font-14, $font-500, $color-1);
+            }
+          }
+          p {
+            @include text-property($font-14, $font-500, $color-1);
+            margin: 0;
+          }
+        }
+        .text-block-2 {
+          background-color: $color-16;
+        }
+        .text-block-3 {
+          background-color: $color-17;
+        }
+        .text-block-4 {
+          background-color: $color-18;
+        }
+      }
+      .card-title {
+        @include text-property($font-18, $font-500, $color-14);
+        text-align: left;
+        margin: 0;
+      }
+      .same-level {
+        margin: 2.5rem 0 0;
+      }
+    }
+  }
+}
+// 0000000000000000000000000000000000000000000000000
+.container-bannerimage {
+  background: url(../images/wave.png) no-repeat,
+    url(../images/rectangle-bg.png) no-repeat,
+    url(../images/banner-container3.png) no-repeat;
+  background-size: cover;
+  padding: 0 0 0 10rem;
+  .favourites {
+    @include text-property($font-65, $font-400, $color-1);
+    padding: 5rem 47rem 0 0;
+    font-family: $font-family-2;
+  }
+  .good-food {
+    @include text-property($font-20, $font-400, $color-1);
+    opacity: 0.7;
+  }
+  .nav-tab-row {
+    .nav-pills {
+      border-bottom: 1px solid $color-6;
+      margin-bottom: 1rem;
+
+      .nav-link {
+        border-radius: 0;
+        @include text-property($font-20, $font-400, $color-1);
+        &.active {
+          color: $color-13;
+          border-bottom: 2px solid $color-13;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  .container {
+    &.tab-pane {
+      // &.fade {
+      margin: 1rem 0 0;
+      padding: 0 0 7rem;
+      .arrow-row {
+        .slider {
+          @include text-property($font-14, $font-400, $color-6);
+          margin: 0 120px 34px 0;
+          img {
+            width: 28px;
+            height: 16px;
+          }
+        }
+      }
+      .offer-card {
+        width: 21rem;
+        border: none;
+        border-radius: 10px;
+        img.card-img-left {
+          width: 163px;
+          // height: 150px;
+        }
+        .card-body {
+          margin: 0 -10px 0 2px;
+          padding-right: 0;
+          .special {
+            @include text-property($font-16, $font-400, $color-14);
+            margin: 0;
+          }
+          .all-day {
+            @include text-property($font-12, $font-400, $color-6);
+          }
+          .flat {
+            @include text-property($font-13, $font-500, $color-15);
+            margin-bottom: 0;
+          }
+          .off {
+            @include text-property($font-28, $font-900, $color-7);
+          }
+          .btn-primary {
+            @include text-property($font-14, $font-400, $color-1);
+            @include btn-property(126px, 35px, none, $color-7);
+            &.btn-2 {
+              color: $color-2;
+              @include btn-property(126px, 35px, 1px solid $color-2, $color-1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.social-banner {
+  background: url(../images/banner-image-4.png) no-repeat,
+    url(../images/wave-2.png) no-repeat;
+  background-size: cover;
+  // background-repeat: no-repeat;
+  .image-overlay {
+    height: 100%;
+    background-color: rgb(36, 6, 18, 0.83);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 9rem 0 0 0;
+    h1 {
+      @include text-property($font-65, $font-400, $color-1);
+      font-family: $font-family-2;
+    }
+    h4 {
+      @include text-property($font-20, $font-400, $color-1);
+      opacity: 0.7;
+      padding: 0 0 4rem;
+    }
+    // }
+    .review-box {
+      background: $color-1 0% 0% no-repeat padding-box;
+      box-shadow: 0px 1px 50px $color-20;
+      border-radius: 10px;
+      padding: 20px;
+      opacity: 1;
+      width: 818px;
+      .sandwich {
+        width: 778px;
+        height: 374px;
+        opacity: 1;
+      }
+      .play-button {
+        position: relative;
+        bottom: 227px;
+        right: -343px;
+      }
+      .expand {
+        position: relative;
+        bottom: 61px;
+        right: -660px;
+      }
+      h3 {
+        @include text-property($font-30, $font-400, $color-4);
+      }
+      p {
+        @include text-property($font-16, $font-400, $color-6);
+      }
+      h5 {
+        @include text-property($font-20, $font-400, $color-6);
+        margin-left: 1rem;
+      }
+      .stars {
+        display: flex;
+        align-items: baseline;
+        margin-left: 1rem;
+        h4 {
+          @include text-property($font-29, $font-600, $color-19);
+          padding: 0 2rem 0 0;
+        }
+        img {
+          padding: 0 0.5rem 0 0;
+        }
+      }
+      .rating-col {
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          &.rating {
+            background: $color-2;
+            color: $color-1;
+            padding: 0px 15px;
+            border-radius: 20px;
+          }
+          &.number-bold {
+            @include text-property($font-25, $font-700, $color-1);
+            padding: 0 0.5rem 0 0;
+          }
+          &.very-good {
+            @include text-property($font-16, $font-400, $color-1);
+          }
+        }
+        h6 {
+          @include text-property($font-16, $font-400, $color-21);
+          padding: 0.75rem 0 0 1rem;
+          opacity: 0.5;
+        }
+      }
+      .review-comments {
+        .david-row {
+          margin-bottom: 2rem;
+          &::after {
+            content: "5 months ago";
+            @include text-property($font-12, $font-400, $color-22);
+            display: block;
+            position: relative;
+            top: 40px;
+            right: -664px;
+          }
+        }
+        .shartlet-row {
+          margin-bottom: 2rem;
+          &::after {
+            content: "10 months ago";
+            @include text-property($font-12, $font-400, $color-22);
+            display: block;
+            position: relative;
+            top: 40px;
+            right: -664px;
+          }
+        }
+
+        h3 {
+          @include text-property($font-16, $font-400, $color-7);
+          padding: 1rem 0;
+          &::after {
+            content: "1 months ago";
+            @include text-property($font-12, $font-400, $color-22);
+            display: block;
+            position: relative;
+            top: 40px;
+            right: -664px;
+          }
+        }
+        h4 {
+          @include text-property($font-16, $font-600, $color-4);
+          opacity: 1;
+          padding: 0;
+        }
+        p {
+          @include text-property($font-14, $font-400, $color-22);
+          opacity: 0.6;
+        }
+        a {
+          text-decoration: none;
+          @include text-property($font-14, $font-400, $color-2);
+          padding: 0 1.5rem 0 0;
+        }
+      }
+      .comment-row {
+        margin: 2rem 0;
+        input[type="text"] {
+          background: $color-23 0% 0% no-repeat padding-box;
+          border-radius: 25px;
+          opacity: 1;
+          outline: none;
+          border: none;
+          width: 550px;
+          height: 50px;
+          padding: 0 2rem;
+          margin: 0 1rem 0 0;
+        }
+        .add-review {
+          @include btn-property(164px, 50px, 1px solid $color-24, $color-1);
+          @include text-property($font-14, $font-400, $color-25);
+        }
+      }
+    }
+    #footer {
+      .container {
+        .footer-info {
+          .stack-information {
+            @include text-property($font-14, $font-400, $color-1);
+            padding: 0 111px 0 0px;
+          }
+        }
+        .footer-links {
+          h4 {
+            @include text-property($font-14, $font-600, $color-26);
+            padding: 0 0 1rem;
+          }
+          ul {
+            li {
+              list-style: none;
+              padding-bottom: 1rem;
+              a {
+                text-decoration: none;
+                @include text-property($font-14, $font-400, $color-1);
+                &:hover {
+                  color: $color-27;
+                }
+              }
+            }
+          }
+        }
+        .go-to-top {
+          button {
+            @include btn-property(50px, 50px, none, $color-28);
+            @include text-property($font-12, $font-700, $color-1);
+          }
+        }
+        .copyright-row {
+          p {
+            @include text-property($font-14, $font-400, $color-1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.scroll {
+  height: 400px;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.scroll::-webkit-scrollbar {
+  width: 5px;
+  height: 170px;
+}
+
+// .scroll::-webkit-scrollbar-track {
+//   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+//   border-radius: 10px;
+// }
+
+.scroll::-webkit-scrollbar-thumb {
+  // border-radius: 10px;
+  // -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  background: #ededed 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+}
